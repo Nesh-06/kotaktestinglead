@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+      <title>Kotak Mahindra Bank </title>
+      <link rel="icon" type="image/x-icon" href="assets/img/custom/kotak_logo.png" />
+      <!-- BEGIN GLOBAL MANDATORY STYLES -->
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+      <!-- END GLOBAL MANDATORY STYLES -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" rel="stylesheet">
+      <!--  BEGIN CUSTOM STYLE FILE  -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <!-- date picker style sheet -->
+      <link href="assets/plugins/Date_picker/Date_picker.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/custom_text.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/lead_module.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/responsive_desktop.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/responsive_mobile.css">
+      <style>
+         body 
+         {
+         background: #FFFFFF !important;
+         }
+      </style>
+      <!--  END CUSTOM STYLE FILE  -->
+   </head>
+   <body>
+      <!-- kotak logo header start -->
+      <header class="custom_header_class">
+         <div class="container">
+            <div class="row">
+               <div class="col-1"></div>
+               <div class="col-11 d-inline-flex">
+                  <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- kotak logo header end -->
+      <!-- main card start -->
+      <div class="container custom_main_container">
+         <div class="card card_main custom_card_main_mobile card_margin_bottom card_height_auto">
+            <div class="card-body p-0">
+               <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4 mt-3 ml-3">
+               <div class="container-fluid px-4">
+                  <span class="custom_lead_header_1 font_color_rustic_red letter_spacing_0 text_align_left">Refer a lead</span>
+                  <p class="custom_lead_sub_header_1 letter_spacing_0 text_align_left font_color_midnight_blue">Enter below details to add/submit a lead.</p>
+                  <!-- ------- business card ------- -->
+                  <div class="card custom_refer_card_style">
+                     <div class="card-body px-3 pb-0 pt-2">
+                        <span class="custom_font_m_14_16 letter_spacing_0 line_height_18 text_align_left font_color_rustic_red">Business</span>
+                        <span class="custom_font_m_12_14 letter_spacing_0 line_height_16 font_color_navy_blue float-right">EDIT</span>
+                        <hr class="my-1 mx-0">
+                        <div class="d-flex flex-row">
+                           <div class="py-2 bd-highlight">
+                              <img src="assets/img/connector_platform/msg_icon.png" class="" alt="axis bank icon">
+                           </div>
+                           <div class="pt-2 px-3 w-100">
+                              <label class="lorem_text_16 font_color_medium_blue width_100_percent m-0" for="loan_check_box_id">
+                                 <span class="custom_font_m_16_18 letter_spacing_0 font_color_black_1 line_height_22">Business Loan</span>
+                                 <p class="custom_font_r_14_16 letter_spacing_0 font_color_black_1 line_height_22 opacity_60">Lorem Ipsum about category</p>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ---------- income / pat and obligation details starts here ---------- -->
+                  <p class="mt-3">Below details are not mandatory. You can proceed without entering them.</p>
+                  <div class="row mb-1" id="pan_textbox_id">
+                     <!-- <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="input-group mb-3 pb-1 floating_label_content">
+                           <input type="text" class="floating_input form-control text-left custom_font_black_4 custom_background_white append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17 input_check_class" placeholder="Income / PAT" aria-label="Username" aria-describedby="basic_addon1" id="income_pat_input_id" onblur="bl_wc_2_enable_button()">
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="basic_addon1">
+                              <i class="dropdown_arrow_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label"></label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                     </div> -->
+                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <select id="select_1" class="form-control drop_down_icon custom_select_input text_regular_18 letter_spacing_0_17 mb-4" onchange = "select_value_change('select_1','select_lable_id_1')">
+                           <option value="" disabled selected hidden class="text_regular_16"></option>                       
+                           <option>Option 1</option>
+                           <option>Option 2</option>
+                           <option>Option 3</option>
+                           <option>Option 4</option>
+                           <option>Option 5</option>
+                       </select>
+                       <label id="select_lable_id_1" class="select_floating_lable">Income / PAT</label>
+                     </div>
+                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="floating_text">
+                           <div class="floating_label_content">
+                              <input class="floating_input text_regular_18 letter_spacing_0_17 font_color_black_1" type="text" id="obligations_input_id" placeholder=" " onkeyup="bl_wc_2_enable_button()">
+                              <label class="floating_label">Obligations</label>
+                              <span class="textbox_error_message text_medium_12 d-none">Error message</span>
+                              <span class="textbox_optional_text text_regular_16 d-none">Optional</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ---------- income / pat and obligation details ends here ---------- -->
+                  <!-- ---------- Type of loan starts here ---------- -->
+                  <p class="custom_font_m_16_18 letter_spacing_0 font_color_medium_blue text_align_left line_height_18_21 mb-3">Type of customer*</p>
+                  <div class="radio-toolbar d-flex mb-4">
+                     <label class="radio-inline box_radio_label com_class_1 d-flex mr-4" id="group_1_label_1" group_name="group_1">
+                     <span></span>
+                     <input class="box_radio_input" local_label_id="group_1_label_1" common_class="com_class_1" type="radio" name="optradio1" value="pass" onclick="bl_wc_2_enable_button()">
+                     <span class="box_radio_input_span font_color_black_1 text_regular_14 letter_spacing_0 line_height_21" id="input_1">SAL</span>
+                     </label>
+                     <label class="radio-inline box_radio_label com_class_1 d-flex" id="group_1_label_2" group_name="group_1">
+                     <input class="box_radio_input" local_label_id="group_1_label_2" common_class="com_class_1" type="radio" name="optradio1" value="pass" onclick="bl_wc_2_enable_button()">
+                     <span class="box_radio_input_span font_color_black_1 text_regular_14 letter_spacing_0 line_height_21" id="input_1">SE</span>
+                     </label>
+                  </div>
+                  <!-- ---------- Type of loan ends here ---------- -->
+                  <!-- ----------- Property Identified starts here ---------- -->
+                  <p class="custom_font_m_16_18 letter_spacing_0 font_color_medium_blue text_align_left line_height_18_21 mb-3">Type of loan</p>
+                  <div class="radio-toolbar d-flex mb-4">
+                     <label class="radio-inline box_radio_label com_class_3 d-flex mr-4" id="group_3_label_1" group_name="group_1">
+                     <input class="box_radio_input" local_label_id="group_3_label_1" common_class="com_class_3" type="radio" name="optradio3" value="pass" onclick="bl_wc_2_enable_button()">
+                     <span class="box_radio_input_span font_color_black_1 text_regular_14 letter_spacing_0 line_height_21" id="input_1">Yes</span>
+                     </label>
+                     <label class="radio-inline box_radio_label com_class_3 d-flex mr-4" id="group_3_label_2" group_name="group_1">
+                     <input class="box_radio_input" local_label_id="group_3_label_2" common_class="com_class_3" type="radio" name="optradio3" value="pass" onclick="bl_wc_2_enable_button()">
+                     <span class="box_radio_input_span font_color_black_1 text_regular_14 letter_spacing_0 line_height_21" id="input_1">No</span>
+                     </label>
+                     <label class="radio-inline box_radio_label com_class_3 d-flex" id="group_3_label_3" group_name="group_1">
+                     <input class="box_radio_input" local_label_id="group_3_label_3" common_class="com_class_3" type="radio" name="optradio3" value="pass" onclick="bl_wc_2_enable_button()">
+                     <span class="box_radio_input_span font_color_black_1 text_regular_14 letter_spacing_0 line_height_21" id="input_1">NA</span>
+                     </label>
+                  </div>
+                  <!-- ------------- Property Identified ends here ---------- -->
+                  <!-- ---------- pin code and city starts here ---------- -->
+                  <div class="row">
+                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="floating_text">
+                           <div class="floating_label_content">
+                              <input class="floating_input text_regular_18 letter_spacing_0_17 font_color_black_1" type="text" id="pincode_input_id" placeholder=" " onkeyup="bl_wc_2_enable_button()">
+                              <label class="floating_label">Pincode</label>
+                              <span class="textbox_error_message text_medium_12 d-none">Error message</span>
+                              <span class="textbox_optional_text text_regular_16 d-none">Optional</span>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="input-group mb-3 pb-1 floating_label_content">
+                           <input type="text" class="floating_input form-control text-left custom_font_black_4 custom_background_white append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17 input_check_class" placeholder="City" aria-label="Username" aria-describedby="basic_addon1" id="city_input_id" onkeyup="bl_wc_2_enable_button()">
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="basic_addon1">
+                              <i class="dropdown_arrow_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label"></label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                     </div> -->
+                      <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <select id="select_2" class="form-control drop_down_icon custom_select_input text_regular_18 letter_spacing_0_17 mb-4" onchange = "select_value_change('select_2','select_lable_id_2')">
+                           <option value="" disabled selected hidden class="text_regular_16"></option>                       
+                           <option>Option 1</option>
+                           <option>Option 2</option>
+                           <option>Option 3</option>
+                           <option>Option 4</option>
+                           <option>Option 5</option>
+                       </select>
+                       <label id="select_lable_id_2" class="select_floating_lable">City</label>
+                     </div>
+                  </div>
+                  <hr class="mt-3">
+                  <!-- ---------- pin code and city starts here ---------- -->
+                  <!-- --------- photo graph and button starts here ----------- -->
+                  <p class="custom_font_m_16_20 letter_spacing_0 font_color_medium_blue text_align_left line_height_18_21 mb-4">Upload Document</p>
+                  <div class="row mb-5">
+                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <p class="custom_font_m_14_16 letter_spacing_0 line_height_18 text_align_left font_color_rustic_red">APPLICANT</p>
+                        <div class="card card_box_shadow">
+                           <div class="card-body">
+                              <p class="text_medium_16 letter_spacing_0 line_height_22 text_align_left font_color_medium_blue">Photograph</p>
+                              <div class="text-center">
+                                 <a onclick="open_upload_photo_modal()">
+                                 <img src="assets/img/connector_platform/document_uploader_icon.png" alt="uploader image" class="text-center">
+                                 </a>
+                              </div>
+                              <p class="text_regular_14 letter_spacing_0 line_height_18 text_align_left font_color_midnight_blue text-center pt-3">Only JPG, PNG & PDF files supported.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 only_mobile_margin_top">
+                        <p class="custom_font_m_14_16 letter_spacing_0 line_height_18 text_align_left font_color_rustic_red">CO-APPLICANT</p>
+                        <div class="card card_box_shadow">
+                           <div class="card-body">
+                              <p class="text_medium_16 letter_spacing_0 line_height_22 text_align_left font_color_medium_blue">Photograph</p>
+                              <div class="text-center">
+                                 <a onclick="open_upload_photo_modal_2()">
+                                 <img src="assets/img/connector_platform/document_uploader_icon.png" alt="uploader image" class="text-center">
+                                 </a>
+                              </div>
+                              <p class="text_regular_14 letter_spacing_0 line_height_18 text_align_left font_color_midnight_blue text-center pt-3">Only JPG, PNG & PDF files supported.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- --------- photo graph and button ends here ----------- -->
+                  <!-- ------ submit button start here ------- -->
+                  <div class="row">
+                     <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-4">
+                        <a href="Success_page.html" class="btn btn-danger custom_button_refer_lead_2 text_bold_18 custom_refer_lead_float_right border_none disabled" id="bl_wc_2_submit_button_id">SUBMIT</a>            
+                     </div>
+                  </div>
+                  <!-- ------- submit button ends here ------- -->
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!------- upload photo or document modal 1 ------>
+      <div class="modal p-0" id="open_refer_modal_upload_photo">
+         <div class="modal-content modal_scroll_y border_none" id="open_refer_modal_upload_photo_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_overflow_mobile">
+                  <div class="card-body">
+                     <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4">
+                     <div class="container-fluid">
+                        <p class="custom_header_1 font_color_rustic_red letter_spacing_0">Upload Document</p>
+                        <p class="font_color_midnight_blue letter_spacing_0 custom_font_r_14_16 custom_line_height_22_27 pb-3">Provide below documents to verify your application.</p>
+                        <p class="custom_font_m_16_20 font_color_medium_blue letter_spacing_0 line_height_22 text-center mt-4 mb-3">Photograph</p>
+                        <div class="row justify-content-center">
+                           <div class="col-sm-12 col-md-12 col-12 text-center">
+                              <img src="assets/img/connector_platform/upload_document_icon.png" alt="Upload document icon" class="center-block">
+                           </div>
+                           <div class="col-sm-12 col-md-12 col-12">
+                              <p class="font_color_midnight_blue line_height_18 letter_spacing_0 custom_font_r_14_16 text-center pt-4">Only JPG, PNG & PDF files supported.</p>
+                           </div>
+                        </div>
+                        <div class="text-center mt-2 pb-3">
+                           <a class="btn custom_button_5 text_bold_14 font_color_white" custom_snackbar="1" onclick="refr_modal_home_photo_preview()">TAKE A PHOTO</a>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-5">
+                              <hr class="hr-text text-center" data-content="OR" />
+                           </div>
+                        </div>
+                        <div class="row justify-content-center pb-3">
+                           <div class="d-inline-flex flex-row upload_document_div">
+                              <div>
+                                 <img src="assets/img/connector_platform/upload_document_2_icon.png" alt="upload_document_icon" class="margin_right_5_12 my-1">
+                              </div>
+                              <div>
+                                 <p class="custom_font_m_16_18 font_color_navy_blue mb-0 letter_spacing_0">Upload file from device</p>
+                                 <p class="custom_font_r_12_14 font_color_midnight_blue mb-0 letter_spacing_0">Only JPG, PNG & PDF files supported.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <!------- upload photo or document modal 2 ------>
+      <div class="modal p-0" id="open_refer_modal_upload_photo_2">
+         <div class="modal-content modal_scroll_y border_none" id="open_refer_modal_upload_photo_2_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_overflow_mobile">
+                  <div class="card-body">
+                     <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4">
+                     <div class="container-fluid">
+                        <p class="custom_header_1 font_color_rustic_red letter_spacing_0">Upload Document</p>
+                        <p class="font_color_midnight_blue letter_spacing_0 custom_font_r_14_16 custom_line_height_22_27 pb-3">Provide below documents to verify your application.</p>
+                        <p class="custom_font_m_16_20 font_color_medium_blue letter_spacing_0 line_height_22 text-center mt-4 mb-3">Photograph</p>
+                        <div class="row justify-content-center">
+                           <div class="col-sm-12 col-md-12 col-12 text-center">
+                              <img src="assets/img/connector_platform/upload_document_icon.png" alt="Upload document icon" class="center-block">
+                           </div>
+                           <div class="col-sm-12 col-md-12 col-12">
+                              <p class="font_color_midnight_blue line_height_18 letter_spacing_0 custom_font_r_14_16 text-center pt-4">Only JPG, PNG & PDF files supported.</p>
+                           </div>
+                        </div>
+                        <div class="text-center mt-2 pb-3">
+                           <a class="btn custom_button_5 text_bold_14 font_color_white" custom_snackbar="1" onclick="refr_modal_home_photo_preview_2()">TAKE A PHOTO</a>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-5">
+                              <hr class="hr-text text-center" data-content="OR" />
+                           </div>
+                        </div>
+                        <div class="row justify-content-center pb-3">
+                           <div class="d-inline-flex flex-row upload_document_div">
+                              <div>
+                                 <img src="assets/img/connector_platform/upload_document_2_icon.png" alt="upload_document_icon" class="margin_right_5_12 my-1">
+                              </div>
+                              <div>
+                                 <p class="custom_font_m_16_18 font_color_navy_blue mb-0 letter_spacing_0">Upload file from device</p>
+                                 <p class="custom_font_r_12_14 font_color_midnight_blue mb-0 letter_spacing_0">Only JPG, PNG & PDF files supported.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <!------- photograph preview modal 1 ------>
+      <div class="modal p-0" id="open_refer_modal_photo_preview">
+         <div class="modal-content modal_scroll_y border_none" id="open_refer_modal_photo_preview_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_overflow_mobile">
+                  <div class="card-body">
+                     <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4">
+                     <div class="container-fluid">
+                        <p class="custom_header_1 font_color_rustic_red letter_spacing_0">Preview</p>
+                        <p class="font_color_midnight_blue letter_spacing_0 custom_font_r_14_16 custom_line_height_22_27 pb-3">Ensure your document is visible clearly. Reupload if it's not clear.</p>
+                        <p class="custom_font_m_16_20 font_color_medium_blue letter_spacing_0 line_height_22 text-center mt-4 mb-3">Preview</p>
+                        <div class="row justify-content-center">
+                           <div class="col-xl-6 col-lg-6 text-center">
+                              <img src="assets/img/connector_platform/photograph_preview_image.png" alt="Upload document icon" class="preview_img_w_75vw_340">
+                           </div>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-lg-6 col-xl-6 mt-2 button_inline_flex justify-content-center">
+                              <div id="div_id text-center" class="pr-3">
+                                 <button class="custom_button del_btn">
+                                 <i class="delete_icon"></i>
+                                 <span class="del_btn_text custom_font_m_14_16 letter_spacing_0 line_height_16">DELETE</span>
+                                 </button>
+                              </div>
+                              <div id="div_id">
+                                 <button class="custom_button reupload_btn">
+                                 <i class="retake_icon"></i>
+                                 <span class="retake_btn_text custom_font_m_14_16 letter_spacing_0 line_height_16">REUPLOAD</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row mt-2 d-flex float_right_and_none pb-3">
+                           <a class="btn btn-danger custom_button_refer_lead text_bold_16" onclick="return_to_refr_lead_main()">CONTINUE</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+      <!------- photograph preview modal 2 ------>
+      <div class="modal p-0" id="open_refer_modal_photo_preview_2">
+         <div class="modal-content modal_scroll_y border_none" id="open_refer_modal_photo_preview_2_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_overflow_mobile">
+                  <div class="card-body">
+                     <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4">
+                     <div class="container-fluid">
+                        <p class="custom_header_1 font_color_rustic_red letter_spacing_0">Preview</p>
+                        <p class="font_color_midnight_blue letter_spacing_0 custom_font_r_14_16 custom_line_height_22_27 pb-3">Ensure your document is visible clearly. Reupload if it's not clear.</p>
+                        <p class="custom_font_m_16_20 font_color_medium_blue letter_spacing_0 line_height_22 text-center mt-4 mb-3">Preview</p>
+                        <div class="row justify-content-center">
+                           <div class="col-xl-6 col-lg-6 text-center">
+                              <img src="assets/img/connector_platform/photograph_preview_image.png" alt="Upload document icon" class="preview_img_w_75vw_340">
+                           </div>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-lg-6 col-xl-6 mt-2 button_inline_flex justify-content-center">
+                              <div id="div_id text-center" class="pr-3">
+                                 <button class="custom_button del_btn">
+                                 <i class="delete_icon"></i>
+                                 <span class="del_btn_text custom_font_m_14_16 letter_spacing_0 line_height_16">DELETE</span>
+                                 </button>
+                              </div>
+                              <div id="div_id">
+                                 <button class="custom_button reupload_btn">
+                                 <i class="retake_icon"></i>
+                                 <span class="retake_btn_text custom_font_m_14_16 letter_spacing_0 line_height_16">REUPLOAD</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row mt-2 d-flex float_right_and_none pb-3">
+                           <a class="btn btn-danger custom_button_refer_lead text_bold_16" onclick="return_to_refr_lead_main_2()">CONTINUE</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- END MAIN CONTAINER -->
+      <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+      <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+      <script src="assets/bootstrap/js/popper.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <!-- <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script> -->
+      <script src="assets/js/app.js"></script>
+      <script src="assets/plugins/font-icons/feather/feather.min.js"></script>
+      <script src="assets/plugins/highlight/highlight.pack.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script src="assets/js/scrollspyNav.js"></script>
+      <script src="assets/plugins/jquery-step/jquery.steps.min.js"></script>
+      <script src="assets/plugins/select2/select2.min.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <script src="assets/plugins/noUiSlider/nouislider.min.js"></script>
+      <script src="assets/js/custom/wNumb.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js"></script
+         >
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+      <script src="assets/js/custom/custom_text.js"></script>
+      <script src="assets/js/custom/user_script.js"></script>
+      <script src="assets/js/custom/status_lead.js"></script>
+      <!-- <script src="plugins/jquery-step/custom-jquery.steps.js"></script> -->
+      <script></script>
+      <!-- END PAGE LEVEL SCRIPTS -->    
+   </body>
+</html>

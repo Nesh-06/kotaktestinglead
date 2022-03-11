@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+      <title>Kotak Mahindra Bank </title>
+      <link rel="icon" type="image/x-icon" href="assets/img/custom/kotak_logo.png" />
+      <!-- BEGIN GLOBAL MANDATORY STYLES -->
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+      <!-- END GLOBAL MANDATORY STYLES -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" rel="stylesheet">
+      <!--  BEGIN CUSTOM STYLE FILE  -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <!-- date picker style sheet -->
+      <link href="assets/plugins/Date_picker/Date_picker.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/custom_text.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/lead_module.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/responsive_desktop.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/responsive_mobile.css">
+      <style>
+         body 
+         {
+         background: #FFFFFF !important;
+         }
+      </style>
+      <!--  END CUSTOM STYLE FILE  -->
+   </head>
+   <body>
+      <!-- kotak logo header start -->
+      <header class="custom_header_class">
+         <div class="container">
+            <div class="row">
+               <div class="col-1"></div>
+               <div class="col-11 d-inline-flex">
+                  <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- kotak logo header end -->
+      <!-- main card start -->
+      <div class="container custom_main_container">
+         <div class="card card_main custom_card_main_mobile card_margin_bottom card_main_height_fit_content min_height_100vh" id="card_main_id">
+            <div class="card-body p-0 card_body_custom_padding_left_1">
+               <img src="assets/img/connector_platform/Back_arrow.png" alt="back icon" class="mb-4 mt-3 ml-0">
+               <div class="container-fluid pl-0">
+                  <div class="margin_bottom_32">
+                     <span class="text_bold_28 text_align_left line_height_36 font_color_rustic_red letter_spacing_0">Filter</span>
+                     <span href="Connectors_kyc_details_filled_edit.html" class="p-3 text_medium_14 letter_spacing_0 line_height_16 float-right font_color_navy_blue" onclick="reset_filter_page()">RESET FILTER</span>
+                  </div>
+                  <!-- <span class="custom_filter font_color_rustic_red letter_spacing_0" >RESET FILTER</span>  --> 
+                  <p class="custom_sub_header_3 font_color_rustic_red letter_spacing_0 text_align_left"> Lead Status</p>
+                  <div class="row pt-2 mt-3 m-0">
+                     <div class="col-12 col-sm-7 col-md-6 col-lg-5 col-xl-5 p-0">
+                        <div class="input-group mb-3 pb-1 floating_label_content">
+                           <input type="text" class="floating_input form-control  text-left custom_font_black_4  append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17" placeholder=" " aria-label="Username" aria-describedby="basic_addon1" id="select_lead_module_input_id" onclick="open_status_lead_modal()"><!-- onclick="open_status_lead_modal()" -->
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="basic_addon1">
+                              <i class="dropdown_arrow_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label text_regular_14"> Select Lead Status</label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="d-none" id="selected_lead_status_badges_div_id">
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_1"> Application Submitted<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_1')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_2"> In Process<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_2')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_3"> Document Pending<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_3')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_4"> File logged in<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_4')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_5"> Closed<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_5')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_6"> Additional details required<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_6')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_7"> Sanctioned<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_7')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_8"> In process of disbursement<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_8')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_9"> Ready for disbursement<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_9')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_10"> Disbursed<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_10')"></a>
+                     </button>
+                  </div>
+                  <!-- <p class="custom_header_2 font_color_rustic_red letter_spacing_0 text_align_left"> Product</p> -->
+                  <p class="custom_sub_header_3 font_color_rustic_red letter_spacing_0 text_align_left margin_bottom_12">Product</p>
+                  <div class="row pt-0 mt-0 m-0 mb-3">
+                     <div class="col-12 col-sm-7 col-md-6 col-lg-5 col-xl-5 p-0">
+                        <div class="input-group mb-0 pb-1 floating_label_content">
+                           <input type="text" class="floating_input form-control  text-left custom_font_black_4  append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17" placeholder=" " aria-label="Username" aria-describedby="basic_addon1" id="select_product_input_id" onclick="open_status_lead2_modal()">
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="basic_addon1">
+                              <i class="dropdown_arrow_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label text_regular_14"> Select Product</label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="d-none" id="selected_product_badges_div_id">
+                      <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_2_set_4">Loan against property<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_2_set_4')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_2_set_1">Homeloan<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_2_set_1')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_2_set_2">Business Loan<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_2_set_2')"></a>
+                     </button>
+                     <button type="button" class="btn pill_button text_regular_14 letter_spacing_0 line_height_196 mb-2 py-0" id="badge_2_set_3">Working Capital<img src="assets/img/connector_platform/close_icon_mid.png" onclick="close_badge('badge_2_set_3')"></a>
+                     </button>                  
+                  </div>
+                  <p class="custom_sub_header_3 font_color_rustic_red letter_spacing_0 text_align_left margin_top_24 mb-2">Date</p>
+                  <div class="row m-0">
+                     <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 px-0 date_tag_custom_column_size date_custom_margin_right">
+                        <!-- calendar -->
+                        <div class="input-group mb-2 mt-1 floating_label_content">
+                           <input type="text" class="floating_input form-control text-left append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17 date_input_padding_left" data-date-format="dd/mm/yyyy" placeholder=" " aria-label="Username" aria-describedby="basic_addon1" id="datepicker_1" onclick="date_picker_function(this)">
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="date_picker_icon_id">
+                              <i class="calendar_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label">From Date</label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                        <!-- <div class="row mb-1"><div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2"></div></div> -->
+                     </div>
+                     <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 date_tag_custom_column_size px-0">
+                        <!-- calendar -->
+                        <div class="input-group mb-2 mt-1 floating_label_content">
+                           <input type="text" class="floating_input form-control text-left append_icon_input_text text_regular_18 font_color_black_1 letter_spacing_0_17 date_input_padding_left" data-date-format="dd/mm/yyyy" placeholder=" " aria-label="Username" aria-describedby="basic_addon1" id="datepicker_2" onclick="date_picker_function(this)">
+                           <div class="input-group-append">
+                              <span class="input-group-text custom_input_span_append append_icon" id="date_picker_icon_id"  >
+                              <i class="calendar_icon" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                           <label class="floating_label">To Date</label>
+                           <span class="icon_textbox_error_message text_medium_12 d-none">Error message</span>
+                           <span class="icon_textbox_optional_text text_regular_16 d-none">Optional</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="m-0">
+                     <a class="btn btn-danger custom_button_check_list_page_disabled text_bold_18 letter_spacing_0 disable_border buttom_bottom_check_list_page check_list_page_button_bottom paddint_12_16" id="main_page_apply_filter_button_id">APPLY FILTER</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END MAIN CONTAINER -->
+      <!------- select lead status modal ------>
+      <div class="modal p-0" id="open_lead_modal_filter">
+         <div class="modal-content modal_scroll_y border_none" id="open_lead_modal_filter_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_height_auto card_overflow_mobile">
+                  <div class="card-body p-0">
+                     <div class="container-fluid margin_top_14 pl-4 mb-3">
+                        <a href="#"><img src="assets/img/connector_platform/cancel_icon_small.png" alt="close_icon"></a>
+                        <span class="text_medium_20 font_color_rustic_red letter_spacing_0 line_height_36 text_align_left pl-3">Select Lead Status</span>
+                     </div>
+                     <div class="span6">
+                        <ul class="p-0">
+                           <li class="list_style_none">
+                              <div id="application_row_id" class="check_box_left_padding">
+                                 <!-- <input class="p-0" type="checkbox" id="testA"/> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box"  id="application_check_box_id" name="axis_bank" value="axis_bank" row_id="application_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testA">Test A</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="application_check_box_id">Application Submitted 
+                                 <span class="text_medium_18 letter_spacing_0 font_color_medium_blue line_height_18 pl-3"></span>
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="in_row_id">
+                                 <!-- <input type="checkbox" id="testC" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="in_check_box_id" name="hbsc_bank" value="hsbc_bank" row_id="in_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testC">Test C</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="in_check_box_id">In Process
+                                 <span class="text_medium_18 letter_spacing_0 font_color_medium_blue line_height_18 pl-3"></span>
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="doc_row_id">
+                                 <!-- <input type="checkbox" id="testB" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="doc_check_box_id" name="hdfc_bank" value="hdfc_bank" row_id="doc_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testB" class="border-top">Test B</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="doc_check_box_id">
+                                 Document Pending
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="close_row_id">
+                                 <!-- <input type="checkbox" id="testD" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="close_check_box_id" name="canara_bank" value="canara_bank" row_id="close_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testD">Test D</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="close_check_box_id">
+                                 Closed
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="file_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="file_check_box_id" name="icici_bank" value="icici_bank" row_id="file_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="file_check_box_id">
+                                 File logged in
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="additional_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="additional_check_box_id" name="canara_bank" value="canara_bank" row_id="additional_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="additional_check_box_id">
+                                 Additional details required
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="sanc_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="sanctioned_check_box_id" name="icici_bank" value="icici_bank" row_id="sanc_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="sanctioned_check_box_id">
+                                 Sanctioned
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="inprogress_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="inprogress_check_box_id" name="canara_bank" value="canara_bank" row_id="inprogress_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="inprogress_check_box_id">
+                                 In process of disbursement
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="ready_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size" type="checkbox" common_class="lead_check_box" id="ready_check_box_id" name="icici_bank" value="icici_bank" row_id="ready_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="ready_check_box_id">
+                                 Ready for disbursement
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="dis_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size check_box_custom_size" type="checkbox" id="disbursed_check_box_id" common_class="lead_check_box" name="icici_bank" value="icici_bank" row_id="dis_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="disbursed_check_box_id">
+                                 Disbursed
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="m-0">
+                        <a class="btn btn-danger custom_button_check_list_page_disabled text_bold_18 letter_spacing_0 disable_border buttom_bottom_check_list_page disabled" id="done_button_modal_1" onclick="back_to_filter_page_1()">DONE</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!------- select product modal ------>
+      <div class="modal" id="open_lead_modal2_filter">
+         <div class="modal-content modal_scroll_y border_none" id="open_lead_modal2_filter_content">
+            <!-- kotak logo header start -->
+            <header class="custom_header_class">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-1"></div>
+                     <div class="col-11 d-inline-flex">
+                        <img src="assets/img/connector_platform/kotak_logo.png" height="58">
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- main card start -->
+            <div class="container custom_main_container">
+               <div class="card card_main custom_card_main_mobile card_margin_bottom card_overflow_mobile">
+                  <div class="card-body p-0">
+                     <!-- <div class="container-fluid pt-3 pl-0">
+                        <div class="row margin_left_14_5">
+                           <a href="#"><img src="assets/img/connector_platform/Back_arrow.png" alt="back_arrow"></a>
+                        </div>
+                        </div> -->
+                     <div class="container-fluid margin_top_14 pl-4 mb-3">
+                        <!-- <p class="text_bold_28 font_color_rustic_red letter_spacing_0 line_height_36 text_align_left mb-2">Select Lead Status</p> -->
+                        <a href="#"><img src="assets/img/connector_platform/cancel_icon_small.png" alt="close_icon"></a>
+                        <span class="text_medium_20 font_color_rustic_red letter_spacing_0 line_height_36 text_align_left pl-3">Select Product</span>
+                     </div>
+                     <div class="span6">
+                        <ul class="p-0">
+                           <li class="list_style_none">
+                              <div id="selected_product_row_id" class="check_box_left_padding">
+                                 <!-- <input class="p-0" type="checkbox" id="testA"/> -->
+                                 <input class="select_bank_check_box check_box_custom_size product_check_box" common_class="product_check_box" temp_id="product_check_box_temp_id_1" type="checkbox" id="selected_product_check_box_id" name="selected_product" value="selected_product" row_id="selected_product_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testA">Test A</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="selected_product_check_box_id">Select Product 
+                                 <span class="text_medium_18 letter_spacing_0 font_color_medium_blue line_height_18 pl-3"></span>
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="loan_against_property_row_id">
+                                 <!-- <input type="checkbox" id="testC" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size product_check_box" common_class="product_check_box" temp_id="product_check_box_temp_id_2" type="checkbox" id="loan_against_property_check_box_id" name="loan_against_property" value="loan_against_property" row_id="loan_against_property_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testC">Test C</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="loan_against_property_check_box_id">Loan against property
+                                 <span class="text_medium_18 letter_spacing_0 font_color_medium_blue line_height_18 pl-3"></span>
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="personal_loan_row_id">
+                                 <!-- <input type="checkbox" id="testB" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size product_check_box" common_class="product_check_box" temp_id="product_check_box_temp_id_3" type="checkbox" id="personal_loan_check_box_id" name="personal_loan" value="personal_loan" row_id="personal_loan_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testB" class="border-top">Test B</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="personal_loan_check_box_id">
+                                 Personal Loan
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="business_loan_row_id">
+                                 <!-- <input type="checkbox" id="testD" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size product_check_box" common_class="product_check_box" temp_id="product_check_box_temp_id_4" type="checkbox" id="business_loan_check_box_id" name="business_loan" value="business_loan" row_id="business_loan_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testD">Test D</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="business_loan_check_box_id">
+                                 Business Loan
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                           <li class="list_style_none">
+                              <div class="check_box_left_padding" id="working_capital_row_id">
+                                 <!-- <input type="checkbox" id="testE" /> -->
+                                 <input class="select_bank_check_box check_box_custom_size product_check_box" common_class="product_check_box" temp_id="product_check_box_temp_id_5" type="checkbox" id="working_capital_check_box_id" name="working_capital" value="working_capital" row_id="working_capital_row_id" onchange="check_box_background(this)">
+                                 <!-- <label for="testE">Test E</label> -->
+                                 <label class="check_box_list_text line_height_18 letter_spacing_0 font_color_medium_blue width_100_percent pl-5 " for="working_capital_check_box_id">
+                                 Working Capital
+                                 </label>
+                                 <hr class="custom_hr_tag_1">
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="m-0">
+                        <a class="btn btn-danger custom_button_check_list_page_disabled text_bold_18 letter_spacing_0 disable_border buttom_bottom_check_list_page check_list_page_button_bottom disabled" id="done_button_modal_2" onclick="back_to_filter_page()">DONE</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+      <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+      <script src="assets/bootstrap/js/popper.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <!-- <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script> -->
+      <script src="assets/js/app.js"></script>
+      <script src="assets/plugins/font-icons/feather/feather.min.js"></script>
+      <script src="assets/plugins/highlight/highlight.pack.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <!-- END GLOBAL MANDATORY SCRIPTS -->
+      <script src="assets/plugins/notification/snackbar/snackbar.min.js"></script>
+      <!-- END PAGE LEVEL PLUGINS -->
+      <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+      <script src="assets/js/components/notification/custom-snackbar.js"></script>
+      <!-- BEGIN PAGE LEVEL SCRIPTS -->
+      <script src="assets/js/scrollspyNav.js"></script>
+      <script src="assets/plugins/jquery-step/jquery.steps.min.js"></script>
+      <script src="assets/plugins/select2/select2.min.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <script src="assets/plugins/noUiSlider/nouislider.min.js"></script>
+      <script src="assets/js/custom/wNumb.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js"></script
+         >
+         <script>
+         $(document).ready(function() 
+         {
+           $('#datepicker_1').datepicker(
+           {
+          });
+           $('#datepicker_2').datepicker(
+           {
+          });
+         });
+               
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+      <script src="assets/js/custom/custom_text.js"></script>
+      <script src="assets/js/custom/user_script.js"></script>
+      <script src="assets/js/custom/status_lead.js"></script>
+      <!-- <script src="plugins/jquery-step/custom-jquery.steps.js"></script> -->
+      <script></script>
+      <!-- END PAGE LEVEL SCRIPTS -->    
+   </body>
+</html>
